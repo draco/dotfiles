@@ -13,10 +13,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'docunext/closetag.vim'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
-Plugin 'mileszs/ack.vim'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'L9'
 Plugin 'rking/ag.vim'
+Plugin 'bling/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -41,10 +40,15 @@ set ruler                 " Always show info along bottom."
 set laststatus=2          " last window always has a statusline"
 set smarttab              " use tabs at the start of a line, spaces elsewhere"
 set smartindent
+set clipboard+=unnamed
+set cursorcolumn
+set cursorline
+set colorcolumn=80
 
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_bold = "1"
+colorscheme solarized
 
 nnoremap j gj
 nnoremap k gk
@@ -82,6 +86,5 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_use_caching = 0
+set wildignore+=*/vendor/**
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-
-colorscheme solarized
