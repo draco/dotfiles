@@ -44,6 +44,9 @@ set clipboard+=unnamed
 set cursorcolumn
 set cursorline
 set colorcolumn=80
+set nobackup     " turn backup off, since most stuff is in vcs
+set nowb
+set noswapfile
 
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
@@ -54,7 +57,7 @@ nnoremap j gj
 nnoremap k gk
 
 map <C-n> :NERDTreeToggle<CR>
-map <C-f> :Ag 
+map <C-f> :Ag
 map <Leader>r :NERDTreeFind<CR>
 map <Leader>t :tabnew<CR>
 nnoremap <Leader>w :w<CR>
@@ -88,3 +91,34 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_use_caching = 0
 set wildignore+=*/vendor/**
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
+if has("autocmd")
+  " enable file type detection
+  filetype on
+
+  " syntax of these languages is fussy over tabs vs spaces
+  autocmd FileType make setlocal ts=2 sts=2 sw=2 noet
+
+  " remove trailing spaces when saved
+  autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+  " return to last edit position when opening files
+  autocmd BufReadPost *
+      \ if line("'\"") > 0 && line("'\"") <= line("$") |
+      \   exe "normal! g`\"" |
+      \ endif
+endif
+
+function! <SID>StripTrailingWhitespaces()
+  " preparation: save last search, and cursor position
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+
+  " do the business
+  %s/\s\+$//e
+
+  " clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
