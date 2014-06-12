@@ -17,10 +17,13 @@ Plugin 'L9'
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'autosession.vim'
+Bundle 'rizzatti/dash.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
 syntax enable
 " Put your non-Plugin stuff after this line
 "
@@ -52,10 +55,13 @@ set noswapfile
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_bold = "1"
+" let g:solarized_termcolors=256
 colorscheme solarized
 
 nnoremap j gj
 nnoremap k gk
+
+imap jk <esc> " map jk to esc
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-f> :Ag
@@ -87,10 +93,15 @@ vmap <Leader>p "+p
 vmap <Leader>P "+P
 
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+" Sane Ignore For ctrlp
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+  \ 'file': '\.exe$\|\.so$\|\.dat$'
+  \ }
+" let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_use_caching = 0
-set wildignore+=*/vendor/**
+set wildignore+=*/vendor/bundle/**
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 if has("autocmd")
