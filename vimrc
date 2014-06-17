@@ -20,6 +20,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'autosession.vim'
 Plugin 'Shutnik/jshint2.vim'
 
+Bundle 'jelera/vim-javascript-syntax'
 Bundle 'rstacruz/sparkup'
 Bundle 'rizzatti/dash.vim'
 
@@ -61,6 +62,9 @@ let g:solarized_contrast = "high"
 let g:solarized_bold = "1"
 " let g:solarized_termcolors=256
 colorscheme solarized
+
+au FileType javascript call JavaScriptFold()
+set foldlevel=99
 
 let g:airline_symbols = {}
 let g:airline_left_sep = '⮀'
