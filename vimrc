@@ -18,6 +18,9 @@ Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'autosession.vim'
+Plugin 'Shutnik/jshint2.vim'
+
+Bundle 'rstacruz/sparkup'
 Bundle 'rizzatti/dash.vim'
 
 " All of your Plugins must be added before the following line
@@ -51,12 +54,22 @@ set colorcolumn=80
 set nobackup     " turn backup off, since most stuff is in vcs
 set nowb
 set noswapfile
+set encoding=utf-8
 
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_bold = "1"
 " let g:solarized_termcolors=256
 colorscheme solarized
+
+let g:airline_symbols = {}
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.linenr = '⭡'
 
 nnoremap j gj
 nnoremap k gk
@@ -70,8 +83,6 @@ map <Leader>t :tabnew<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>e :wq<CR>
-nnoremap <CR> G
-nnoremap <BS> gg
 
 " vp doesn't replace paste buffer
 function! RestoreRegister()
