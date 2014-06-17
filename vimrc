@@ -60,11 +60,7 @@ set encoding=utf-8
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_bold = "1"
-" let g:solarized_termcolors=256
 colorscheme solarized
-
-au FileType javascript call JavaScriptFold()
-set foldlevel=99
 
 let g:airline_symbols = {}
 let g:airline_left_sep = '⮀'
