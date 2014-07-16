@@ -43,6 +43,12 @@
 
 1. Change the font (for both alias and anti-alias) to `Menlo-Powerline.otf` in iTerm's settings.
 
+1. Open `~/.zshrc/`, add `DEFAULT_USER="change to OS X username"` and edit the theme to `ZSH_THEME="agnoster"`.
+
+1. Replace `~/.oh-my-zsh/themes/agnoster.zsh-theme` and use the `agnoster.zsh-theme` included in this repository (_this fixes font-rendering issues_).
+
+1. Restart vim and zsh.
+
 7. Profit!!!
 
 ## Sample Commands
