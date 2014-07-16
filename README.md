@@ -39,6 +39,10 @@
 
 3. Import downloaded theme in _iTerm > Colors > Load preset`.
 
+1. Install the `Menlo-Powerline.otf` font-face.
+
+1. Change the font (for both alias and anti-alias) to `Menlo-Powerline.otf` in iTerm's settings.
+
 7. Profit!!!
 
 ## Sample Commands
