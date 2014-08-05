@@ -11,18 +11,17 @@ Plugin 'tpope/vim-rails'
 Plugin 'Raimondi/delimitMate'
 Plugin 'kien/ctrlp.vim'
 Plugin 'docunext/closetag.vim'
-Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'L9'
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'autosession.vim'
 Plugin 'Shutnik/jshint2.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'Shougo/neocomplete.vim'
 
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'rstacruz/sparkup'
-Bundle 'rizzatti/dash.vim'
+" Bundle 'jelera/vim-javascript-syntax'
+" Bundle 'rstacruz/sparkup'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,10 +56,28 @@ set nowb
 set noswapfile
 set encoding=utf-8
 
+" Syntax coloring lines that are too long just slows down the world
+set synmaxcol=128
+" set ttyfast " u got a fast terminal
+" set ttyscroll=3
+" set lazyredraw " to avoid scrolling problems
+" ruby path if you are using RVM
+let g:ruby_path = system('rvm current')
+
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_bold = "1"
+let jshint2_save = 1
 colorscheme solarized
+
+let g:syntastic_aggregate_errors = 1
 
 let g:airline_symbols = {}
 let g:airline_left_sep = '⮀'
@@ -116,6 +133,13 @@ set wildignore+=*/vendor/bundle/**
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 if has("autocmd")
+  " Enable omni completion.
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
   " enable file type detection
   filetype on
 
