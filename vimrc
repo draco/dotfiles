@@ -8,6 +8,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-markdown'
 Plugin 'Raimondi/delimitMate'
 Plugin 'kien/ctrlp.vim'
 Plugin 'docunext/closetag.vim'
@@ -70,6 +71,9 @@ let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
+
+" Markdown
+let g:markdown_fenced_languages = ['css', 'html', 'xhtml', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml']
 
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
