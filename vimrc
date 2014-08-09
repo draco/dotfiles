@@ -21,9 +21,6 @@ Plugin 'Shutnik/jshint2.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'Shougo/neocomplete.vim'
 
-" Bundle 'jelera/vim-javascript-syntax'
-" Bundle 'rstacruz/sparkup'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -104,6 +101,9 @@ map <Leader>t :tabnew<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>e :wq<CR>
+
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "<TAB>"
 
 " vp doesn't replace paste buffer
 function! RestoreRegister()
