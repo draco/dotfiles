@@ -140,6 +140,8 @@ if has("autocmd")
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
   " enable file type detection
   filetype on
 
