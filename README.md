@@ -7,7 +7,7 @@
 
 2. Symlink vimrc file
    ```
-   git clone git@github.com:draco/dotfiles.git ~/dotfiles
+   git clone https://github.com/draco/dotfiles.git ~/dotfiles
    ln -s ~/dotfiles/vimrc ~/.vimrc
    ```
 
