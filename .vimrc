@@ -15,11 +15,16 @@ Plugin 'docunext/closetag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'L9'
 Plugin 'rking/ag.vim'
-Plugin 'bling/vim-airline'
 Plugin 'autosession.vim'
-Plugin 'Shutnik/jshint2.vim'
-Plugin 'majutsushi/tagbar'
 Plugin 'Shougo/neocomplete.vim'
+
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'elzr/vim-json'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'stanangeloff/php.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -69,25 +74,18 @@ let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
 
+" vim-javascript
+let g:javascript_enable_domhtmlcss = 1
+
+" javascript-libraries-syntax
+let g:used_javascript_libs = 'underscore,jquery,react,chai'
+
+" vim-jsx
+let g:jsx_ext_required = 0
+
 " Markdown
 let g:markdown_fenced_languages = ['css', 'html', 'xhtml', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml']
-
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-let g:solarized_bold = "1"
-let jshint2_save = 1
-colorscheme solarized
-
 let g:syntastic_aggregate_errors = 1
-
-let g:airline_symbols = {}
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
 
 nnoremap j gj
 nnoremap k gk
