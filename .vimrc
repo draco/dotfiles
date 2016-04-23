@@ -15,7 +15,6 @@ Plugin 'docunext/closetag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'L9'
 Plugin 'rking/ag.vim'
-Plugin 'autosession.vim'
 Plugin 'Shougo/neocomplete.vim'
 
 Plugin 'pangloss/vim-javascript'
@@ -58,6 +57,8 @@ set nobackup     " turn backup off, since most stuff is in vcs
 set nowb
 set noswapfile
 set encoding=utf-8
+
+colorscheme spacegray
 
 " Syntax coloring lines that are too long just slows down the world
 set synmaxcol=128
