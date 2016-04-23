@@ -125,7 +125,7 @@ vmap <Leader>P "+P
 let g:ctrlp_cmd = 'CtrlP'
 " Sane Ignore For ctrlp
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|node_modules\|public\/system\|data\|log\|tmp$',
   \ 'file': '\.exe$\|\.so$\|\.dat$'
   \ }
 " let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
