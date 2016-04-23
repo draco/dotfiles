@@ -59,6 +59,13 @@ set encoding=utf-8
 
 colorscheme spacegray
 
+" Custom color scheme overrides
+hi LineNr          ctermbg=NONE ctermfg=239      guibg=#111314  guifg=#3E4853  cterm=NONE      gui=NONE
+hi CursorColumn    ctermbg=237   ctermfg=NONE   guibg=NONE  guifg=NONE     cterm=NONE      gui=NONE
+hi CursorLine      ctermbg=236    ctermfg=NONE   guibg=NONE  guifg=NONE     cterm=NONE      gui=NONE
+hi Directory       ctermbg=NONE ctermfg=242     guibg=NONE     guifg=#5FAFAF  cterm=NONE      gui=NONE
+hi Normal          ctermbg=NONE ctermfg=NONE  guibg=NONE  guifg=NONE  cterm=NONE      gui=NONE
+
 " Syntax coloring lines that are too long just slows down the world
 set synmaxcol=128
 " set ttyfast " u got a fast terminal
