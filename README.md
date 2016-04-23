@@ -29,5 +29,7 @@
    export LC_ALL=en_US.UTF-8
    ```
 
-6. Restart your iTerm2/Terminator, vim and zsh.
+6. Change color preset in iTerm2 to use `~/dotfiles/themes/spacegray/iTerm2/spacegray.itermcolors`.
+
+7. Restart your iTerm2/Terminator, vim and zsh.
 
