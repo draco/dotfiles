@@ -71,6 +71,7 @@ hi CursorColumn    ctermbg=237   ctermfg=NONE   guibg=NONE  guifg=NONE     cterm
 hi CursorLine      ctermbg=236    ctermfg=NONE   guibg=NONE  guifg=NONE     cterm=NONE      gui=NONE
 hi Directory       ctermbg=NONE ctermfg=242     guibg=NONE     guifg=#5FAFAF  cterm=NONE      gui=NONE
 hi Normal          ctermbg=NONE ctermfg=NONE  guibg=NONE  guifg=NONE  cterm=NONE      gui=NONE
+hi Visual term=reverse cterm=reverse
 
 " ruby path if you are using RVM
 let g:ruby_path = system('rvm current')
