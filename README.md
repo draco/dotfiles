@@ -28,6 +28,7 @@
    ```
    export LANG=en_US.UTF-8
    export LC_ALL=en_US.UTF-8
+   ZSH_THEME="honukai"
    ```
 
 6. Change color preset in iTerm2 to use `~/dotfiles/themes/spacegray/iTerm2/spacegray.itermcolors`.
