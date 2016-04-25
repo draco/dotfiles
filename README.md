@@ -8,6 +8,7 @@
 2. Symlink relevant config files
    ```
    git clone https://github.com/draco/dotfiles.git ~/dotfiles
+   git submodule update --init
    ln -s ~/dotfiles/.vimrc ~/.vimrc
    ln -s ~/dotfiles/themes/spacegray/colors ~/.vim/colors
    ln -s ~/dotfiles/custom/honukai.zsh-theme ~/.oh-my-zsh/themes
