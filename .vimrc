@@ -21,6 +21,7 @@ Plugin 'Shougo/neocomplete.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'airblade/vim-gitgutter'
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
