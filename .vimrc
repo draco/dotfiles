@@ -16,6 +16,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'docunext/closetag.vim'
 Plugin 'L9'
 
+Plugin 'valloric/matchtagalways'
+
 Plugin 'rking/ag.vim'
 Plugin 'Shougo/neocomplete.vim'
 
@@ -97,6 +99,9 @@ let g:used_javascript_libs = 'underscore,jquery,react,chai'
 
 " vim-jsx
 let g:jsx_ext_required = 0
+
+" MatchTagAlways
+let g:mta_filetypes = { 'html' : 1, 'xhtml' : 1, 'xml' : 1, 'jinja' : 1, 'eruby': 1 }
 
 " Markdown
 let g:markdown_fenced_languages = ['css', 'html', 'xhtml', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml']
