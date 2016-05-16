@@ -13,6 +13,9 @@
    ln -s ~/dotfiles/themes/spacegray/colors ~/.vim/colors
    ln -s ~/dotfiles/custom/honukai.zsh-theme ~/.oh-my-zsh/themes
    ln -s ~/dotfiles/.tmux.conf ~/
+   
+   // If using Linux and Terminator
+   ln -s ~/dotfiles/themes/spacegray/Terminator/spacegray.terminator ~/.config/terminator/config
    ```
 
 3. Install Plugins:
