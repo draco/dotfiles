@@ -17,6 +17,8 @@
    // If using Linux and Terminator
    ln -s ~/dotfiles/themes/spacegray/Terminator/spacegray.terminator ~/.config/terminator/config
    ```
+   (PS: Hello future self, if you are using Terminator on Linux and the text is really crispy, 
+   consider turning off font-hinting.)
 
 3. Install Plugins:
    Launch `vim` and run `:PluginInstall`
