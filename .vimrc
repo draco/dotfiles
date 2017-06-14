@@ -4,6 +4,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
@@ -16,21 +17,19 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'docunext/closetag.vim'
 Plugin 'L9'
 
+Plugin 'sheerun/vim-polyglot'
+
 Plugin 'valloric/matchtagalways'
 
 Plugin 'rking/ag.vim'
 Plugin 'Shougo/neocomplete.vim'
 
 Plugin 'scrooloose/nerdtree'
+
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
 
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
 Plugin 'othree/javascript-libraries-syntax.vim'
-
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'hail2u/vim-css3-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -101,7 +100,7 @@ let g:used_javascript_libs = 'underscore,jquery,react,chai'
 let g:jsx_ext_required = 0
 
 " MatchTagAlways
-let g:mta_filetypes = { 'html' : 1, 'xhtml' : 1, 'xml' : 1, 'jinja' : 1, 'eruby': 1 }
+let g:mta_filetypes = { 'html' : 1, 'xhtml' : 1, 'xml' : 1, 'jinja' : 1, 'eruby': 1, 'javascript.jsx': 1 }
 
 " Markdown
 let g:markdown_fenced_languages = ['css', 'html', 'xhtml', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml']
