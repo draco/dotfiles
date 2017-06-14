@@ -18,6 +18,7 @@ Plugin 'docunext/closetag.vim'
 Plugin 'L9'
 
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'sheerun/vim-polyglot'
 
@@ -60,7 +61,7 @@ set smartindent
 set clipboard+=unnamed
 set cursorcolumn " highlight current column
 set cursorline " highlight current line
-set colorcolumn=80
+set colorcolumn=100
 set nobackup     " turn backup off, since most stuff is in vcs
 set nowb
 set noswapfile
@@ -82,6 +83,8 @@ hi Directory       ctermbg=NONE ctermfg=242     guibg=NONE     guifg=#5FAFAF  ct
 hi Normal          ctermbg=NONE ctermfg=NONE  guibg=NONE  guifg=NONE  cterm=NONE      gui=NONE
 hi Visual term=reverse cterm=reverse
 
+let g:airline_theme='minimalist'
+
 " ruby path if you are using RVM
 let g:ruby_path = system('rvm current')
 
@@ -96,7 +99,7 @@ let g:neocomplete#enable_smart_case = 1
 let g:javascript_enable_domhtmlcss = 1
 
 " javascript-libraries-syntax
-let g:used_javascript_libs = 'underscore,jquery,react,chai'
+let g:used_javascript_libs = 'lodash,react'
 
 " vim-jsx
 let g:jsx_ext_required = 0
@@ -144,7 +147,7 @@ vmap <Leader>P "+P
 
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|vendor\/bundle|public\/images\|node_modules\|public\/system\|data\|log\|tmp$',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|vendor\/bundle|public\/images\|node_modules\|public\/system\|data\|coverage\|public\|log\|tmp$',
   \ 'file': '\.exe$\|\.so$\|\.zip$\|\.dat$'
   \ }
 let g:ctrlp_use_caching = 0
