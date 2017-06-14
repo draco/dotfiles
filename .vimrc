@@ -17,6 +17,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'docunext/closetag.vim'
 Plugin 'L9'
 
+Plugin 'vim-airline/vim-airline'
+
 Plugin 'sheerun/vim-polyglot'
 
 Plugin 'valloric/matchtagalways'
