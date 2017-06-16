@@ -11,28 +11,22 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-markdown'
-
 Plugin 'Raimondi/delimitMate'
 Plugin 'kien/ctrlp.vim'
 Plugin 'docunext/closetag.vim'
 Plugin 'L9'
-
+Plugin 'kshenoy/vim-signature'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
-Plugin 'sheerun/vim-polyglot'
-
 Plugin 'valloric/matchtagalways'
-
 Plugin 'rking/ag.vim'
 Plugin 'Shougo/neocomplete.vim'
-
 Plugin 'scrooloose/nerdtree'
-
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'airblade/vim-gitgutter'
-
-Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'easymotion/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -222,3 +216,20 @@ function! <SID>StripTrailingWhitespaces()
   let @/=_s
   call cursor(l, c)
 endfunction
+
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+nmap s <Plug>(easymotion-overwin-f)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
