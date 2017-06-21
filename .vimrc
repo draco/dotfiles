@@ -142,7 +142,7 @@ vmap <Leader>P "+P
 
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|vendor\/bundle|public\/images\|node_modules\|public\/system\|data\|coverage\|public\|log\|tmp$',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|\.happypack\|vendor\/bundle|public\/images\|node_modules\|public\/system\|data\|coverage\|public\|log\|tmp$',
   \ 'file': '\.exe$\|\.so$\|\.zip$\|\.dat$'
   \ }
 let g:ctrlp_use_caching = 0
