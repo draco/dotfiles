@@ -6,6 +6,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-fugitive'
+Plugin 'shumphrey/fugitive-gitlab.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
@@ -61,7 +62,7 @@ set nobackup     " turn backup off, since most stuff is in vcs
 set nowb
 set noswapfile
 set encoding=utf-8
-set synmaxcol=128 " stop highlighting syntax after this col
+set synmaxcol=200 " stop highlighting syntax after this col
 set lazyredraw " to avoid scrolling problems
 set showmatch " highlight matching [{()}]
 set wildmenu  " visual autocomplete for command menu
@@ -142,7 +143,7 @@ vmap <Leader>P "+P
 
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|\.happypack\|vendor\/bundle|public\/images\|node_modules\|public\/system\|data\|coverage\|public\|log\|tmp$',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|\.happypack\|\.nyc_output\|vendor\/bundle|public\/images\|node_modules\|public\/system\|data\|coverage\|public\|log\|tmp$',
   \ 'file': '\.exe$\|\.so$\|\.zip$\|\.dat$'
   \ }
 let g:ctrlp_use_caching = 0
